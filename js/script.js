@@ -67,8 +67,6 @@ function answer(){
 function cambioPregunta() {
     cuestionario.innerHTML = preguntas[respuestas][0]
 }
-//las respuestas las puedo pasar a minuscula con toLowerCase()
-
 
 //Teclado
 var teclas = document.querySelectorAll('.tecla');
@@ -123,3 +121,12 @@ function drawCircle(cantidad){
     circuloderespuestas.style.setProperty('--atinadas',  cantidad +' 100')
 
 }
+
+//slider de nota
+
+var notaFinal = document.getElementById('nota')
+var slider = document.getElementById('rango')
+slider.oninput = (() =>{
+    var cuantovale = slider.value;
+    notaFinal.innerHTML = cuantovale
+})
